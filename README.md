@@ -42,16 +42,14 @@ print(classification_report(y_test, y_pred))
 # Visualização (opcional com Yellowbrick)
 from yellowbrick.classifier import ConfusionMatrix
 
-visualizer = ConfusionMatrix(knn_classifier)
-visualizer.fit(X_train, y_train)
-visualizer.score(X_test, y_test)
-visualizer.show()
+cm = ConfusionMatrix(knn_classifier)
+cm.fit(X_train, y_train)
+cm.score(X_test, y_test)
 
 ## 🛠️ Bibliotecas utilizadas
 
 - `scikit-learn`
-- `matplotlib`
-- `pandas`
+- `pickle`
 - `yellowbrick` *(opcional para visualização)*
 ```
 
@@ -64,7 +62,7 @@ Clone o repositório:
 ```
 Instale as dependências:
 ```bash
-    pip install -r requirements.txt
+    !pip install yellowbrick
 ```    
 Execute o jupyter notebook
 ```bash
@@ -76,10 +74,10 @@ Exercício desenvolvido como parte da trilha de Machine Learning da IA Expert Ac
 
 ## 🧠 Conceitos aplicados
 
-1. Classificação supervisionada
+- Classificação supervisionada
 
-2. Algoritmo KNN
+- Algoritmo KNN
 
-3. Métricas de avaliação (accuracy, confusion matrix, classification report)
+- Métricas de avaliação (accuracy, confusion matrix, classification report)
 
-4. Visualização com Yellowbrick
+- Visualização com Yellowbrick
